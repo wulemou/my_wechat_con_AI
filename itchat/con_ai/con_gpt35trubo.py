@@ -1,10 +1,17 @@
 # create by h3c s31362
 
 
+import os
+from dotenv import load_dotenv
 from openai import OpenAI
 
 
-my_35_key = "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"
+# 读取本项目内的 .env 文件变量
+env_path = os.path.join(os.path.dirname(__file__), "..", '.env')
+load_dotenv(env_path)
+
+
+my_35_key = os.getenv('GPT35APIKEY')
 
 
 client = OpenAI(api_key=my_35_key)

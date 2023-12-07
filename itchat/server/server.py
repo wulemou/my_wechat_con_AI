@@ -13,7 +13,6 @@ import uvicorn
 from typing import Union
 from fastapi import FastAPI
 from pydantic import BaseModel
-from con_gpt35trubo import gpt35_send_rcv
 
 
 app = FastAPI()
